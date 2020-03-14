@@ -5,7 +5,7 @@ public class Part5 {
 		  Tree<Integer> tree = new Tree<>();
 
 			System.out.println(tree.add(3));
-			System.out.println(tree.add(3));
+		    System.out.println(tree.add(3));
 
 			System.out.println("~~~~~~~");
 			tree.add(new Integer[]{1, 2, 5, 4, 6, 0});

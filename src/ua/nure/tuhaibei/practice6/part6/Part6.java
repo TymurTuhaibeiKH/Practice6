@@ -45,19 +45,19 @@ public class Part6 {
 	}
 
 	public static String readFromFile(String fileName) { 
-		StringJoiner sb = new StringJoiner(System.lineSeparator());
+		StringJoiner join = new StringJoiner(System.lineSeparator());
 		try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(new File(fileName)),
 				"Cp1251")) {
 			BufferedReader br = new BufferedReader(inputStreamReader);
 			String line;
 			while ((line = br.readLine()) != null) {
-				sb.add(line);
+				join.add(line);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.err.println(e.getMessage());
 		}
-		return sb.toString().replaceAll("(?m)^\\s", "");
+		return join.toString().replaceAll("(?m)^\\s", "");
 	}
 
 }
